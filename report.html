@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>A1 Report – Overdose/Incident Analysis (Allegheny County)</title>
+  <link rel="stylesheet" href="https://dig.cmu.edu/datavis-fall-2024/assignments/report.css" />
+  <style>
+    figure img { max-width: 100%; border: 1px solid #ddd; }
+    figure { margin-bottom: 2rem; }
+  </style>
+</head>
+
+<body>
+<header>
+  <h1>
+    <small>Assignment 1</small>
+    Exploratory Data Analysis
+  </h1>
+  <p><strong>Your Name</strong> — <em>andrewid@andrew.cmu.edu</em></p>
+</header>
+
+<main>
+  <section>
+    <h2>Subtheme: Overdose Patterns in Allegheny County</h2>
+    <h3>Overall Analysis Questions</h3>
+    <ol>
+      <li><strong>How have yearly overdose deaths in Allegheny County changed over time, and what share involve fentanyl?</strong></li>
+      <li><strong>Where are the geographic hotspots for fatal overdoses, and how often do incidents happen away from a person’s home ZIP code?</strong></li>
+      <li><strong>Which demographic groups (age and race) have been most affected by fatal overdoses in recent years?</strong></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Discoveries &amp; Insights</h2>
+
+    <figure>
+      <h3>Incidents by Year</h3>
+      <img src="A1.png" alt="Incidents by Year" />
+      <figcaption>
+        This chart shows the number of overdose incidents reported each year. The trend is relatively steady from 2007 through 2013, then rises sharply beginning in 2014 with a peak around 2017. Although levels fluctuate afterward, they remain well above pre-2014 baselines. The most recent year is shaded lighter because it is likely incomplete and should be interpreted with caution.
+      </figcaption>
+    </figure>
+
+    <figure>
+      <h3>Incidents by Calendar Month</h3>
+      <img src="A2.png" alt="Incidents by Month" />
+      <figcaption>
+        Overdose incidents are fairly consistent across the calendar year, suggesting seasonality is not a major driver. Modest peaks appear in April and August, while winter months like January and November are slightly lower. January can be inflated if unknown months default to January during data entry.
+      </figcaption>
+    </figure>
+
+    <figure>
+      <h3>Incidents by Day of Month</h3>
+      <img src="A3.png" alt="Incidents by Day of Month" />
+      <figcaption>
+        Incidents are relatively uniform across the month, with two data-quality artifacts: a spike on the 1st (often a default when the exact day is unknown) and a dip on the 31st (since not all months include that day). Apart from these effects, counts are steady across days.
+      </figcaption>
+    </figure>
+
+    <figure>
+      <h3>Top-5 Most Prevalent Types by Month</h3>
+      <img src="A4.png" alt="Top 5 Types by Month Heatmap" />
+      <figcaption>
+        This heatmap summarizes incidents by month for the five most prevalent incident types (e.g., leading substances). Types are sorted by overall volume from top to bottom. Some categories show minor seasonal peaks, while others are steady—useful context for planning targeted interventions or outreach.
+      </figcaption>
+    </figure>
+
+    <figure>
+      <h3>Overdoses by Age Group and Year</h3>
+      <img src="A5.png" alt="Age Group by Year Heatmap" />
+      <figcaption>
+        Fatal overdoses are most concentrated among adults aged 25–34, with a sharp surge peaking in 2016–2017. The 35–44 and 45–54 groups also carry a heavy burden, particularly in the last decade. Youth (&lt;25) and older adults (65+) remain comparatively low, indicating the crisis has disproportionately affected working-age adults.
+      </figcaption>
+    </figure>
+
+    <figure>
+      <h3>Overdoses by Race Group and Year</h3>
+      <img src="A6.png" alt="Race Group by Year Heatmap" />
+      <figcaption>
+        Overdoses have been overwhelmingly concentrated among White residents, rising sharply through the mid-2010s and peaking around 2016–2017 during the height of the fentanyl crisis, then remaining elevated into the early 2020s before easing. Black residents show smaller absolute numbers but a parallel upward trend, with marked increases after 2018 and peaks in 2020–2021. Other groups are smaller in count but show recent increases.
+      </figcaption>
+    </figure>
+
+    <figure>
+      <h3>Geographic Distribution: ZIP-Code Overview</h3>
+      <img src="A7.png" alt="ZIP Map Overview" />
+      <figcaption>
+        Mapping incidents by ZIP code reveals clear clustering across Allegheny County. Several central and river-adjacent communities show consistently higher concentrations, whereas other areas remain relatively unaffected, underscoring the geographic concentration of risk.
+      </figcaption>
+    </figure>
+
+    <figure>
+      <h3>ZIP-Level Disparity (Annotated)</h3>
+      <img src="A8.png" alt="ZIP Map Annotated with highest and zero incident ZIPs" />
+      <figcaption>
+        To highlight disparities, we annotate the ZIP with the highest number of incidents (e.g., 15210) against one with none reported (e.g., 15261). This contrast emphasizes uneven burdens and the importance of targeting resources—such as Narcan distribution or outreach—where incidents are concentrated.
+      </figcaption>
+    </figure>
+
+    <figure>
+      <h3>Substance Presence: Fentanyl</h3>
+      <img src="A9.png" alt="Fentanyl Presence" />
+      <figcaption>
+        Fentanyl is present in the majority of recent fatal overdoses, dominating the landscape after 2015. Its rise explains much of the surge in deaths, reflecting the drug’s potency and rapid infiltration into the supply. This confirms fentanyl as the critical driver of the crisis.
+      </figcaption>
+    </figure>
+
+    <figure>
+      <h3>Substance Presence: Opioids</h3>
+      <img src="A10.png" alt="Opioid Presence" />
+      <figcaption>
+        Opioids more broadly are present in most cases, though fentanyl in particular has shifted the landscape. Opioid involvement reinforces that the epidemic remains centered on this class of substances, with important implications for treatment, prescribing, and harm reduction.
+      </figcaption>
+    </figure>
+
+    <figure>
+      <h3>Incidents by Age Bucket</h3>
+      <img src="A11.png" alt="Incidents by Age Bucket" />
+      <figcaption>
+        Breaking down incidents by age buckets confirms the concentration among younger and middle-aged adults. The 25–34 and 35–44 groups have driven much of the crisis, though the burden extends into 45–54. Interventions may need to be tailored for these specific cohorts.
+      </figcaption>
+    </figure>
+
+    <figure>
+      <h3>Incidents by Home vs. Away ZIP</h3>
+      <img src="A12.png" alt="Incidents by Home vs Away ZIP" />
+      <figcaption>
+        Comparing home versus away ZIPs reveals that a meaningful fraction of overdoses occur away from home, suggesting mobility, drug purchase patterns, or other contextual risks. Understanding this dynamic is important for designing interventions and locating treatment or prevention resources.
+      </figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Summary of Lessons Learned</h2>
+    <p>
+      Fatal overdoses in Allegheny County escalated dramatically in the mid-2010s, with <em>fentanyl</em> emerging as the dominant driver. Incidents are not evenly distributed geographically: central and river-adjacent ZIP codes carry the heaviest burdens. Demographically, working-age adults (25–44) are most affected, with men and White residents representing the largest share, alongside growing impacts in Black communities in recent years. Overall, the epidemic is concentrated and complex—across places, populations, and substances—suggesting targeted, community-specific interventions and continued data hygiene (e.g., reducing defaulted dates) will meaningfully improve analysis and response planning.
+    </p>
+  </section>
+</main>
+</body>
+</html>
